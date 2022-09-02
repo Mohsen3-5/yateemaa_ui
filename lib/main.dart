@@ -131,7 +131,7 @@ class fullapp extends StatelessWidget {
                       height: 4.h,
                     ),
                     Text(
-                      'About us',
+                      'About us.',
                       style: TextStyle(
                           fontSize: 15.sp,
                           color: Colors.grey,
