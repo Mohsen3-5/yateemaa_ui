@@ -25,7 +25,10 @@ class timelineitem extends StatelessWidget {
           Icons.delivery_dining,
           size: 30.sp,
         ),
-        title: Text(title, style: TextStyle(fontSize: 13.sp)),
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 15.0, 0, 0),
+          child: Text(title, style: TextStyle(fontSize: 13.sp)),
+        ),
         subtitle: Text(subtitile, style: TextStyle(fontSize: 10.sp)),
         trailing: Text(trailing, style: TextStyle(fontSize: 10.sp)),
       ),
