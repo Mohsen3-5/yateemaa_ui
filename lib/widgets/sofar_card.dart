@@ -40,10 +40,16 @@ class sofarcard extends StatelessWidget {
             SizedBox(
               height: 2.h,
             ),
-            Text(
-              bottomtext,
-              style: TextStyle(fontSize: 15.sp),
-              textAlign: TextAlign.center,
+            FittedBox(
+              fit: BoxFit.fitWidth,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4.sp),
+                child: Text(
+                  bottomtext,
+                  style: TextStyle(fontSize: 15.sp),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
           ],
         ),
