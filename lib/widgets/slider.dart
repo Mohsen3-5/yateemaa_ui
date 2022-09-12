@@ -28,7 +28,7 @@ class _sliderState extends State<slider> {
             itemCount: widget.imgList.length,
             itemBuilder:
                 (BuildContext context, int itemIndex, int pageViewIndex) {
-              Future.delayed(Duration.zero, () async {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
                 updateindex(itemIndex);
               });
 
@@ -37,8 +37,6 @@ class _sliderState extends State<slider> {
                   text: widget.desList[itemIndex]);
             },
             options: CarouselOptions(
-              autoPlay: true,
-              autoPlayInterval: const Duration(seconds: 3),
               aspectRatio: 1.5,
               viewportFraction: 1.0,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
