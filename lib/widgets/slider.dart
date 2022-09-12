@@ -8,20 +8,20 @@ class slider extends StatefulWidget {
   slider({required this.imgList, required this.desList});
   final List<String> imgList;
   final List<String> desList;
-  int currentIndex = 0;
+  double currentIndex = 0;
   @override
   State<slider> createState() => _sliderState();
 }
 
 class _sliderState extends State<slider> {
+  void updateindex(double index) {
+    setState(() {
+      widget.currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    void updateindex(int index) {
-      setState(() {
-        widget.currentIndex = index;
-      });
-    }
-
     return Column(
       children: [
         CarouselSlider.builder(
@@ -29,7 +29,7 @@ class _sliderState extends State<slider> {
             itemBuilder:
                 (BuildContext context, int itemIndex, int pageViewIndex) {
               WidgetsBinding.instance.addPostFrameCallback((_) {
-                updateindex(itemIndex);
+                updateindex(itemIndex.toDouble());
               });
 
               return sliderItem(
@@ -47,11 +47,11 @@ class _sliderState extends State<slider> {
         ),
         DotsIndicator(
           dotsCount: widget.imgList.length,
-          position: widget.currentIndex.toDouble(),
+          position: widget.currentIndex,
           decorator: const DotsDecorator(
             activeSize: Size.square(12.0),
             color: Colors.black87, // Inactive color
-            activeColor: const Color(0xff0b8a8d),
+            activeColor: Color(0xff0b8a8d),
           ),
         )
       ],
