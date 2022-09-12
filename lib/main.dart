@@ -89,7 +89,6 @@ class fullapp extends StatelessWidget {
                     slider(
                       imgList: imgList,
                       desList: desList,
-                      lenght: imgList.length,
                     ),
 
                     /*  */

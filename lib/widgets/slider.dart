@@ -5,10 +5,9 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:sizer/sizer.dart';
 
 class slider extends StatefulWidget {
-  slider({required this.imgList, required this.desList, required this.lenght});
+  slider({required this.imgList, required this.desList});
   final List<String> imgList;
   final List<String> desList;
-  final int lenght;
   int currentIndex = 0;
   @override
   State<slider> createState() => _sliderState();
