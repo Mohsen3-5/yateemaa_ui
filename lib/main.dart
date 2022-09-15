@@ -9,7 +9,6 @@ import 'package:yateemaa_ui/widgets/slider.dart';
 import 'package:yateemaa_ui/widgets/sofar_card.dart';
 import 'package:yateemaa_ui/widgets/time_line_item.dart';
 import 'package:sizer/sizer.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 
 /*
 In this app Ui project I tried to minimize repeating code by make widget files 
